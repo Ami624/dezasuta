@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+/* work1-1 */
+.box_1 {
+    width: 31.25%;
+    height: 300px;
+    background-color: blue;
+    border: 1px solid black;
+}
+
+.container_1 {
+    display: flex;
+    max-width: 960px;
+    justify-content: space-between;
+    margin: auto;
+}
+
+/* work1-2 */
+.box_2 {
+    width: 31.25%;
+    height: 300px;
+    background-color: red;
+    border: 1px solid black;
+}
+
+.container_2 {
+    display: flex;
+    max-width: 960px;
+    justify-content: space-between;
+    margin: 50px auto;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* work1-3 Header */
+#header {
+    max-width: 960px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 10px;
+    height: 170px;
+}
+
+#header ul {
+    display: flex;
+    align-items: center;
+}
+
+#header ul li {
+    margin-right: 30px;
+    border-left: 1px solid black;
+}
+
+/* woek2-1 レスポンシブ */
+@media screen and (max-width: 767px) {
+    #header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #header ul {
+        flex-direction: column;
+        padding: 0 10px;
+        align-items: stretch;
+    }
+
+    #header ul li {
+        margin: 10px;
+        border-bottom: 1px solid black;
+    }
+
+    #header ul li:not(:last-child) {
+        border-left: none;
+    }
+}
+
+/* うまくいかなかった点
+・全体を通してmaginとpaddingの使い分けがわかりません。
+　maginは外側の余白/paddingは内側の余白ということは理解しているのですが、
+　今回の様なナビゲーションメニューの場合どちらを使うのか、それともどちらも使わなければならないのか、
+　はっきりと理解ができていないので考え方などあれば教えていただきたいです。
+
+・work1-3 ナビゲーションメニューの左側に縦線をつけることはできたが
+　線と文字がくっついてしまっています。
+　見本の形にするにはどうしたらいいでしょうか？
+
+・work2-1 レスポンシブ対応した際
+　タイトルとナビゲーションが縦になる設定まではできたのですが、
+　work1-3と同じく線と文字の間隔の整え方・線を文字幅以上に伸ばす
+　やり方がわかりません。
+　
+　その他、やり方が違うところ等添削よろしくお願いいたします。
+*/
