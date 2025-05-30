@@ -1,1 +1,65 @@
 @charset "utf-8";
+
+body {
+    background-color: #eeeeee;
+}
+
+.service {
+    padding: 60px 0;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 60px;
+    color: #327355;
+}
+
+.container {
+    width: 90%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.container .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .col {
+    width: 30%;
+    background-color: #ffffff;
+}
+
+.container h3 {
+    padding: 5px 20px 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #327355;
+    border-left: 10px solid #327355;
+    padding-left: 10px;
+}
+
+.container .text {
+    padding: 8px 12px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+@media screen and (max-whidth: 400px) {
+    .container .row {
+        flex-direction: column;
+    }
+
+    .container .col {
+        width: 100%;
+    }
+}
+
+
+/* 教えていただきたい点
+・h３タグの横についている縦線の調整の仕方がわからなかったです。
+・レスポンシブの設定が上手く反映されません。。。
+　デベロッパーツールで確認しても原因が見つけられませんでした。
+
+添削よろしくお願いいたします*/
