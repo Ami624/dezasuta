@@ -31,12 +31,13 @@ h2 {
 }
 
 .container h3 {
-    padding: 5px 20px 0;
+    padding: 3px 20px;
     font-size: 18px;
     font-weight: 700;
     color: #327355;
-    border-left: 10px solid #327355;
-    padding-left: 10px;
+    border-left: 8px solid #327355;
+    padding-left: 7px;
+    margin: 5px 12px;
 }
 
 .container .text {
@@ -46,9 +47,10 @@ h2 {
 }
 
 
-@media screen and (max-whidth: 400px) {
+@media screen and (max-width: 400px) {
     .container .row {
         flex-direction: column;
+        gap: 20px;
     }
 
     .container .col {
@@ -57,9 +59,4 @@ h2 {
 }
 
 
-/* 教えていただきたい点
-・h３タグの横についている縦線の調整の仕方がわからなかったです。
-・レスポンシブの設定が上手く反映されません。。。
-　デベロッパーツールで確認しても原因が見つけられませんでした。
-
-添削よろしくお願いいたします*/
+/* 添削よろしくお願いいたします!*/
