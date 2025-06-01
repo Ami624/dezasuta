@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+#header {
+    max-width: 960px;
+    display: flex;
+    align-items: last baseline;
+    justify-content: space-between;
+    margin: 80px auto;
+    padding: 0 3%;
+    height: 150px;
+}
+
+#header .site-title .text {
+    padding-top: 10px;
+}
+
+#header ul {
+    display: flex;
+    padding: 20px 0;
+}
+
+#header ul li {
+    margin-left: 30px;
+}
+
+#header ul li a:hover {
+    opacity: 0.5;
+}
+
+#header .search {
+    width: 25px;
+}
+
+.main-img {
+    max-width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+.header-text {
+    text-align: left;
+    margin: 50px 120px;
+    padding: 10px;
+    font-size: 28px;
+    background-color: rgb(228, 226, 224);
+}
+
+/* お疲れ様です！
+初めてサイトの模写挑戦してみました。
+なんとかファーストビューまでやってみました。。
+画像は自分が持っていたもので代用し、細かい数値や余白までは
+気にする余裕がありませんでした。。
+見本のデベロッパーツールも確認しながら進め他のですが、
+実際のサイトはリンクが入っていたり、class名も細かくつけられていたりして
+解読することが難しすぎましたが、雰囲気に近づけるように今まで教えていただいた範囲でやったので
+添削をお願いいたします。
+
+
+⚪︎教えていただきたい点⚪︎
+
+・そもそも私が書いたHTMLの構成が合っているのか見ていただきたいです。
+人それぞれの書き方かなと思いますが、初心者なのでできるだけ分かりやすく書ける方法があれば教えていただきたいです。
+
+・cssのセレクターはどこまで記入したらいいのでしょうか？
+例えば、#header .site-title .text {}の場合、＃headerは必要ですか？
+
+・メイン画像の下の文章にbackground-colorをつけましたが、
+見本では文字の終わりで背景色も終わっています。
+どのように設定したら良いでしょうか？
+
+他、細かい点・効率のいいやり方等教えてください。
+よろしくお願いいたします。
+*/
