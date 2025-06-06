@@ -1,0 +1,310 @@
+@charset "utf-8";
+
+body {
+    background-color: #e8d9bf;
+}
+
+h2 {
+    text-align: center;
+}
+
+a:hover {
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+/* header */
+.header_slider img {
+    width: 100%;
+}
+
+header {
+    position: relative;
+}
+
+.header_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 7% 0 3%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header_logo {
+    width: 227px;
+}
+
+.PC_nav ul {
+    display: flex;
+    gap: 54px;
+}
+
+.PC_nav li {
+    width: 105px;
+    text-align: center;
+    color: #fff;
+    font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+        "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* header下のキャッチコピー */
+.top_text {
+    text-align: center;
+    margin: 0 auto;
+    padding: 104px 0 93px 0;
+}
+
+.en_text {
+    font-size: 30px;
+}
+
+.main_text {
+    font-size: 82px;
+    line-height: 1.17;
+    letter-spacing: 0.1em;
+}
+
+.sub_text {
+    font-size: 23px;
+    line-height: 1.65;
+    letter-spacing: 0.1em;
+}
+
+/* about 
+・このセクションのh２タグが中央に配置されてしまっています。
+他のセクションのh２タグは全て中央配置だった為、
+上の方でtext-align: center;を書きました。
+ただ、このセクションだけは中央では無い為、h２タグにクラス名をつけたのですが、
+これは関係無く上で書いたものが適応されるのでしょうか？
+}*/
+#about {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.about_img {
+    width: 50%;
+    border-bottom-right-radius: 82px;
+}
+
+.about_text {
+    width: 50%;
+    padding-left: 83px;
+    justify-content: flex-start;
+}
+
+.about_heading img {
+    /* text-align: left; */
+    width: 273px;
+}
+
+.text_main {
+    font-size: 44px;
+    line-height: 1.38;
+}
+
+.text_sub {
+    font-size: 16px;
+    line-height: 1.62;
+}
+
+/* menu 
+・Drink.food.sweetの下のテキストがくっついてしまいます。
+marginやpaddingを試してみましたが、上手くいきません。
+pタグは.colに入れない方が良いでしょうか？
+*/
+.menu_container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.menu_container img {
+    width: 152px;
+    border-top-right-radius: 42px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.col {
+    width: 30%;
+    position: relative;
+    display: inline;
+}
+
+.col img {
+    display: block;
+    width: 300px;
+}
+
+.col h3 {
+    color: #d30202;
+    font-size: 38px;
+    position: absolute;
+    bottom: 50px;
+    left: 30;
+}
+
+.text {
+    font-size: 17px;
+    line-height: 1.47;
+}
+
+/* gallery 
+・カンプを見て画像のサイズを設定したのですが、
+お手本と写真の位置がズレてしまいます。
+これは何か調整が必要ですか？
+・このセクションはchatGPTを参考にした為、
+overflow-x: auto;とobject-fit: cover;がどんなものなのか
+何となくしかわからないので教えていただきたいです。
+*/
+.gallery_container img {
+    width: 245px;
+    margin-bottom: 15px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.gallery img {
+    width: 384px;
+    object-fit: cover;
+    margin-bottom: 59px;
+}
+
+/* event 
+日付とspanタグで囲ったものの間に
+余白を入れるためにはどうしたら良いでしょうか？
+paddingを入れてみたのですが、配置が崩れたりしてしまいます。*/
+.event_container {
+    text-align: center;
+}
+
+.event_container img {
+    width: 174px;
+}
+
+.event_box {
+    background-color: #ffffff;
+    border: 2px solid #4f260b;
+    display: inline-block;
+    text-align: left;
+    font-size: 23px;
+    padding: 37px 159px;
+    margin: 78px auto;
+}
+
+.event_text {
+    border-bottom: 1px solid #4f260b;
+}
+
+/* access 
+google map の下にわずかに背景色が入ってしまっています。
+原因がわかりません。*/
+.access_container img {
+    width: 214px;
+    margin-bottom: 38px;
+}
+
+iframe {
+    width: 100%;
+}
+
+/* footer 
+・copyにmaginをつけると背景色が変わってしまいます。*/
+
+footer {
+    background-color: #ffffff;
+}
+
+.footer_container {
+    display: flex;
+    justify-content: center;
+    margin: o auto;
+    padding: 40px;
+}
+
+.footer_logo {
+    width: 227px;
+    padding-right: 40px;
+}
+
+.store_info p {
+    color: #000000;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.pagetop_button {
+    width: 125px;
+    position: fixed;
+    right: 40px;
+    bottom: 120px;
+}
+
+.copy {
+    color: #000000;
+    text-align: center;
+    font-size: 16px;
+    margin: 73px auto;
+}
+
+
+/* 
+・HTMLの構成と
+・CSSでテキストサイズと色・line-height・letter-spacingの指定
+・画像サイズの設定・角が曲がっている箇所の値の設定
+までやってみました!
+
+①magin・paddingについて疑問点があった為
+これは全体的に設定ができていません。
+デザイナーさんからカンプを貰った際には
+どこがmaginでどこがpaddingかまでは指定されていないと思います。
+これば自分のルールをある程度作ってやっていくものなのでしょうか？
+
+②クラス名をつける際、アンダーバーをつけているのですが、
+ハイフンですか？どちらでも大丈夫ですか？
+
+③画像のサイズ設定の際、全てwidthで設定したのですが、
+何を基準にpxか％か理解ができていません。
+考え方などありましたら教えていただきたいです。
+
+
+
+感想
+ここまで作ったものを見ると今まで学んだことでここまで作れるんだ！という気持ちになりますが、
+作っている最中はわからないことだらけで調べるのに時間がかかってしまいます。
+数をこなして学んで行くのみかと思いますが、、、
+ひとまず雰囲気だけでも作れて驚いています。嬉しいです！
+
+google mapは今いきたい場所にしました！
+あまり旅行に行くことがないのでおすすめできることがなくすみません。。。
+
+添削よろしくお願いいたします！*/
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 400px) {}
