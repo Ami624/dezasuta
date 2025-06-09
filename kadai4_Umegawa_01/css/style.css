@@ -77,7 +77,6 @@ header {
     font-size: 23px;
     line-height: 1.65;
     letter-spacing: 0.1em;
-    margin-bottom: 94px;
 }
 
 /* about */
@@ -97,8 +96,11 @@ header {
     width: 41%;
 }
 
+.about_heading {
+    text-align: left;
+}
+
 .about_heading img {
-    /* align-items: left; */
     width: 273px;
     margin-bottom: 49px;
 }
@@ -136,20 +138,23 @@ header {
     display: inline;
 }
 
+.col div {
+    position: relative;
+}
+
 .col img {
     display: block;
     width: 300px;
     border-top-right-radius: 42px;
     margin-bottom: 44px;
-    position: relative;
 }
 
 .col h3 {
     color: #d30202;
     font-size: 38px;
     position: absolute;
-    bottom: 50px;
-    left: 30px;
+    top: 94%;
+    left: 3%;
 }
 
 .text {
@@ -168,7 +173,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 0;
 }
 
 .gallery img {
@@ -188,11 +192,20 @@ header {
 .event_box {
     background-color: #ffffff;
     border: 2px solid #4f260b;
+    text-align: center;
+    font-size: 23px;
+    padding: 37px 0;
+    margin: 78px auto;
+    max-width: 1000px;
+}
+
+.event_item {
+    line-height: 1.95;
+}
+
+.event_box div {
     display: inline-block;
     text-align: left;
-    font-size: 23px;
-    padding: 37px 159px;
-    margin: 78px auto;
 }
 
 .event_text {
@@ -219,8 +232,10 @@ footer {
 
 .footer_container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 83px 0 74px 0;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .footer_logo {
@@ -250,23 +265,24 @@ footer {
 
 /* 
 【about】
-aboutのタイトルh２タグが中央に配置されてしまっています。
-他のセクションのh２タグは全て中央配置だった為、
-上の方でtext-align: center;を書きました。
-ただ、このセクションだけは中央では無い為、h２タグにクラス名をつけ、
-.about_heading img に対して左揃えとしたかったのですが、
-これは関係無く上で書いたものが適応されるのでしょうか？
-
-【menu】
-・画像に対してposition: relative;
-h３タグにposition: absolute;と指定してみたのですが、
-タイトルが変なところに行ってしまいます。
-値が間違っているのか、positionの位置が間違っているのでしょうか？
+.about_imgに対して
+border-bottom-right-radius: 82px;を指定していますが、
+上手く反映されません。
+調べて、overflow: hidden;が出てきて試しましたが、上手くいきませんでした。
+初回提出時は角丸が適応されていたのでしが、いつの間にか反映されなくなっていました。。。
 
 【event】
-・.event_boxのpaddingの設定が調べてもわかりませんでした。
+・添削を元にHTMLを修正しCSSで下記記述を追加したのですが、
+.event_box div {
+    display: inline-block;
+    text-align: left;
+}
+上手く反映されていません。
+指定するセレクタが間違っていますか？
 
-他、全体的に添削よろしくお願いいたします！*/
+他、
+HTML/CSSの記述が的確なのか、効率よく書けているのかが不安です。
+全体的に添削よろしくお願いいたします！*/
 
 
 
