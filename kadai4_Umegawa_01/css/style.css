@@ -16,6 +16,7 @@ a:hover {
 /* header */
 .header_slider img {
     width: 100%;
+    margin-bottom: 104px;
 }
 
 header {
@@ -62,31 +63,29 @@ header {
 
 .en_text {
     font-size: 30px;
+    margin-bottom: 46px;
 }
 
 .main_text {
     font-size: 82px;
     line-height: 1.17;
     letter-spacing: 0.1em;
+    margin-bottom: 20px;
 }
 
 .sub_text {
     font-size: 23px;
     line-height: 1.65;
     letter-spacing: 0.1em;
+    margin-bottom: 94px;
 }
 
-/* about 
-・このセクションのh２タグが中央に配置されてしまっています。
-他のセクションのh２タグは全て中央配置だった為、
-上の方でtext-align: center;を書きました。
-ただ、このセクションだけは中央では無い為、h２タグにクラス名をつけたのですが、
-これは関係無く上で書いたものが適応されるのでしょうか？
-}*/
+/* about */
 #about {
     max-width: 1000px;
     margin: 0 auto;
     display: flex;
+    justify-content: space-between;
 }
 
 .about_img {
@@ -95,31 +94,28 @@ header {
 }
 
 .about_text {
-    width: 50%;
-    padding-left: 83px;
-    justify-content: flex-start;
+    width: 41%;
 }
 
 .about_heading img {
-    /* text-align: left; */
+    /* align-items: left; */
     width: 273px;
+    margin-bottom: 49px;
 }
 
 .text_main {
     font-size: 44px;
     line-height: 1.38;
+    margin-bottom: 23px;
 }
 
 .text_sub {
     font-size: 16px;
     line-height: 1.62;
+    margin-bottom: 131px;
 }
 
-/* menu 
-・Drink.food.sweetの下のテキストがくっついてしまいます。
-marginやpaddingを試してみましたが、上手くいきません。
-pタグは.colに入れない方が良いでしょうか？
-*/
+/* menu */
 .menu_container {
     max-width: 1000px;
     margin: 0 auto;
@@ -127,7 +123,7 @@ pタグは.colに入れない方が良いでしょうか？
 
 .menu_container img {
     width: 152px;
-    border-top-right-radius: 42px;
+    margin-bottom: 39px;
 }
 
 .row {
@@ -137,13 +133,15 @@ pタグは.colに入れない方が良いでしょうか？
 
 .col {
     width: 30%;
-    position: relative;
     display: inline;
 }
 
 .col img {
     display: block;
     width: 300px;
+    border-top-right-radius: 42px;
+    margin-bottom: 44px;
+    position: relative;
 }
 
 .col h3 {
@@ -151,45 +149,34 @@ pタグは.colに入れない方が良いでしょうか？
     font-size: 38px;
     position: absolute;
     bottom: 50px;
-    left: 30;
+    left: 30px;
 }
 
 .text {
     font-size: 17px;
     line-height: 1.47;
+    margin-bottom: 38px;
 }
 
-/* gallery 
-・カンプを見て画像のサイズを設定したのですが、
-お手本と写真の位置がズレてしまいます。
-これは何か調整が必要ですか？
-・このセクションはchatGPTを参考にした為、
-overflow-x: auto;とobject-fit: cover;がどんなものなのか
-何となくしかわからないので教えていただきたいです。
-*/
+/* gallery */
 .gallery_container img {
     width: 245px;
-    margin-bottom: 15px;
+    margin-bottom: 17px;
 }
 
 .gallery {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow-x: auto;
     padding: 10px 0;
 }
 
 .gallery img {
-    width: 384px;
-    object-fit: cover;
+    width: 20%;
     margin-bottom: 59px;
 }
 
-/* event 
-日付とspanタグで囲ったものの間に
-余白を入れるためにはどうしたら良いでしょうか？
-paddingを入れてみたのですが、配置が崩れたりしてしまいます。*/
+/* event */
 .event_container {
     text-align: center;
 }
@@ -212,30 +199,28 @@ paddingを入れてみたのですが、配置が崩れたりしてしまいま�
     border-bottom: 1px solid #4f260b;
 }
 
-/* access 
-google map の下にわずかに背景色が入ってしまっています。
-原因がわかりません。*/
+/* access */
 .access_container img {
     width: 214px;
     margin-bottom: 38px;
 }
 
-iframe {
+.access_map iframe {
+    display: block;
     width: 100%;
+    height: 470px;
 }
 
-/* footer 
-・copyにmaginをつけると背景色が変わってしまいます。*/
-
+/* footer */
 footer {
     background-color: #ffffff;
+    padding-bottom: 73px;
 }
 
 .footer_container {
     display: flex;
     justify-content: center;
-    margin: o auto;
-    padding: 40px;
+    padding: 83px 0 74px 0;
 }
 
 .footer_logo {
@@ -260,41 +245,28 @@ footer {
     color: #000000;
     text-align: center;
     font-size: 16px;
-    margin: 73px auto;
 }
 
 
 /* 
-・HTMLの構成と
-・CSSでテキストサイズと色・line-height・letter-spacingの指定
-・画像サイズの設定・角が曲がっている箇所の値の設定
-までやってみました!
+【about】
+aboutのタイトルh２タグが中央に配置されてしまっています。
+他のセクションのh２タグは全て中央配置だった為、
+上の方でtext-align: center;を書きました。
+ただ、このセクションだけは中央では無い為、h２タグにクラス名をつけ、
+.about_heading img に対して左揃えとしたかったのですが、
+これは関係無く上で書いたものが適応されるのでしょうか？
 
-①magin・paddingについて疑問点があった為
-これは全体的に設定ができていません。
-デザイナーさんからカンプを貰った際には
-どこがmaginでどこがpaddingかまでは指定されていないと思います。
-これば自分のルールをある程度作ってやっていくものなのでしょうか？
+【menu】
+・画像に対してposition: relative;
+h３タグにposition: absolute;と指定してみたのですが、
+タイトルが変なところに行ってしまいます。
+値が間違っているのか、positionの位置が間違っているのでしょうか？
 
-②クラス名をつける際、アンダーバーをつけているのですが、
-ハイフンですか？どちらでも大丈夫ですか？
+【event】
+・.event_boxのpaddingの設定が調べてもわかりませんでした。
 
-③画像のサイズ設定の際、全てwidthで設定したのですが、
-何を基準にpxか％か理解ができていません。
-考え方などありましたら教えていただきたいです。
-
-
-
-感想
-ここまで作ったものを見ると今まで学んだことでここまで作れるんだ！という気持ちになりますが、
-作っている最中はわからないことだらけで調べるのに時間がかかってしまいます。
-数をこなして学んで行くのみかと思いますが、、、
-ひとまず雰囲気だけでも作れて驚いています。嬉しいです！
-
-google mapは今いきたい場所にしました！
-あまり旅行に行くことがないのでおすすめできることがなくすみません。。。
-
-添削よろしくお願いいたします！*/
+他、全体的に添削よろしくお願いいたします！*/
 
 
 
@@ -307,4 +279,4 @@ google mapは今いきたい場所にしました！
 
 
 
-@media screen and (max-width: 400px) {}
+@media screen and (max-width: 375px) {}
