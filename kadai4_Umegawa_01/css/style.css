@@ -16,7 +16,6 @@ a:hover {
 /* header */
 .header_slider img {
     width: 100%;
-    margin-bottom: 104px;
 }
 
 header {
@@ -85,11 +84,14 @@ header {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 95px;
 }
 
 .about_img {
     width: 50%;
     border-bottom-right-radius: 82px;
+    overflow: hidden;
 }
 
 .about_text {
@@ -114,16 +116,16 @@ header {
 .text_sub {
     font-size: 16px;
     line-height: 1.62;
-    margin-bottom: 131px;
 }
 
 /* menu */
-.menu_container {
+#menu {
     max-width: 1000px;
     margin: 0 auto;
+    margin-bottom: 38px;
 }
 
-.menu_container img {
+h2 img {
     width: 152px;
     margin-bottom: 39px;
 }
@@ -160,11 +162,14 @@ header {
 .text {
     font-size: 17px;
     line-height: 1.47;
-    margin-bottom: 38px;
 }
 
 /* gallery */
-.gallery_container img {
+#gallery {
+    margin-bottom: 59px;
+}
+
+#gallery img {
     width: 245px;
     margin-bottom: 17px;
 }
@@ -177,15 +182,14 @@ header {
 
 .gallery img {
     width: 20%;
-    margin-bottom: 59px;
 }
 
 /* event */
-.event_container {
+#event {
     text-align: center;
 }
 
-.event_container img {
+#event h2 img {
     width: 174px;
 }
 
@@ -195,7 +199,7 @@ header {
     text-align: center;
     font-size: 23px;
     padding: 37px 0;
-    margin: 78px auto;
+    margin: 0 auto 78px auto;
     max-width: 1000px;
 }
 
@@ -203,17 +207,19 @@ header {
     line-height: 1.95;
 }
 
-.event_box div {
+.event_list {
     display: inline-block;
     text-align: left;
 }
 
 .event_text {
+    display: inline-block;
+    margin-left: 55px;
     border-bottom: 1px solid #4f260b;
 }
 
 /* access */
-.access_container img {
+#access img {
     width: 214px;
     margin-bottom: 38px;
 }
@@ -264,25 +270,31 @@ footer {
 
 
 /* 
-【about】
-.about_imgに対して
-border-bottom-right-radius: 82px;を指定していますが、
-上手く反映されません。
-調べて、overflow: hidden;が出てきて試しましたが、上手くいきませんでした。
-初回提出時は角丸が適応されていたのでしが、いつの間にか反映されなくなっていました。。。
-
 【event】
-・添削を元にHTMLを修正しCSSで下記記述を追加したのですが、
-.event_box div {
-    display: inline-block;
-    text-align: left;
-}
-上手く反映されていません。
-指定するセレクタが間違っていますか？
+・日付とevent_textの間に余白ができていなかったので
+event_textに対してmargin_leftをつけてみたんですが、
+余白部分まで下線が伸びてしまったので
+display: inline-block;を設定し
+余白をつけました。
+そうすると下線が文字から離れて行っちゃいました。。。
+どうしたらよかったでしょうか？
 
-他、
-HTML/CSSの記述が的確なのか、効率よく書けているのかが不安です。
-全体的に添削よろしくお願いいたします！*/
+【class="wrapper"の使い方について】
+今回は使っていないのですが、
+コンテンツ幅を指定するのにclass="wrapper"
+をよく使うとの記事を見ました。
+これはbodyタグの内側に<div class="wrapper" </div>をつけるか
+sectionタグにクラス名class="wrapper"をつける。
+これを指定する事で現状、
+about・menu・event・footerでそれぞれに書いている
+max-width: 1000px;
+margin: 0 auto;
+が1回で適応され、
+header・gallery・accessなど画面いっぱいに
+広げたい箇所は個別で幅を指定するという認識であっていますか？
+この使い方はされますか？
+
+添削よろしくお願いいたします！*/
 
 
 
