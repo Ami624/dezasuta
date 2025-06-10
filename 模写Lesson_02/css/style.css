@@ -1,0 +1,139 @@
+@charset "utf-8";
+
+.wrapper {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+h2 {
+    display: inline-block;
+    margin-bottom: 70px;
+    border-bottom: 1px solid #393E46;
+}
+
+.header_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.site_titel {
+    color: #ffffff;
+    background-color: #393E46;
+    width: 120px;
+    height: 40px;
+    font-size: 28px;
+    text-align: center;
+}
+
+.navigation ul {
+    display: flex;
+    gap: 30px;
+}
+
+.navigation li {
+    text-align: center;
+}
+
+.hero_img {
+    width: 100%;
+    height: 600px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+}
+
+#about {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.about_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.my_icon {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+.about_me {
+    padding-left: 30px;
+    text-align: left;
+}
+
+.name {
+    margin-bottom: 10px;
+}
+
+#bicycle {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.low {
+    display: flex;
+    justify-content: space-between;
+    gap: 17px;
+}
+
+.bicycle_img {
+    width: 274px;
+    margin-bottom: 10px;
+}
+
+h3 {
+    margin-bottom: 10px;
+}
+
+.text {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+@media screen and (max-width: 600px) {
+    .hero_img {
+        height: 600px;
+        width: 100vw;
+    }
+
+    .hero_img img {
+        width: auto;
+        height: 100%;
+        margin: 0 auto;
+    }
+
+    .about_box {
+        flex-direction: column;
+    }
+
+    .low {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/* 
+お題では600pxがブレイクポイントで
+メインビジュアルはwidth375px・hight600pxとなっておりました。
+
+画像自体左に寄ってしまいます。。
+こちらも画面幅に合わせて変わるように指定したかったのですが、
+どのようにしたら良いのでしょうか？
+
+他、全体的に構成や指定している数値など
+見ていただけますでしょうか？
+
+よろしくお願いいたします。*/
