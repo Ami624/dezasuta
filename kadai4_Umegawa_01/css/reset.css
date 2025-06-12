@@ -4,7 +4,10 @@
 
 /*利用するタグによってこちらの内容は増やす*/
 
-html,
+html {
+    scroll-behavior: smooth;
+}
+
 body,
 h1,
 h2,

@@ -86,6 +86,7 @@ header {
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 95px;
+    padding-right: 10px;
 }
 
 .about_img {
@@ -123,6 +124,7 @@ header {
     max-width: 1000px;
     margin: 0 auto;
     margin-bottom: 38px;
+    padding: 0 10px;
 }
 
 h2 img {
@@ -170,7 +172,7 @@ h2 img {
 }
 
 #gallery img {
-    width: 245px;
+    width: 20%;
     margin-bottom: 17px;
 }
 
@@ -187,6 +189,7 @@ h2 img {
 /* event */
 #event {
     text-align: center;
+    padding: 0 10px;
 }
 
 #event h2 img {
@@ -213,9 +216,8 @@ h2 img {
 }
 
 .event_text {
-    display: inline-block;
     margin-left: 55px;
-    border-bottom: 1px solid #4f260b;
+    text-decoration: underline;
 }
 
 /* access */
@@ -234,6 +236,7 @@ h2 img {
 footer {
     background-color: #ffffff;
     padding-bottom: 73px;
+    padding-left: 10px;
 }
 
 .footer_container {
@@ -270,31 +273,20 @@ footer {
 
 
 /* 
-【event】
-・日付とevent_textの間に余白ができていなかったので
-event_textに対してmargin_leftをつけてみたんですが、
-余白部分まで下線が伸びてしまったので
-display: inline-block;を設定し
-余白をつけました。
-そうすると下線が文字から離れて行っちゃいました。。。
-どうしたらよかったでしょうか？
+感想
+今回の課題をいただいた際は、
+今の自分のレベルで完成させることが出来るのかとかなり不安でしたが、
+平垣内先生の分かりやすく丁寧な添削のおかげで
+何とかここまで作れて達成感があり、形に出来たことが嬉しく
+ここ数日前からコーディング楽しいかも！と思えるようになりました！
 
-【class="wrapper"の使い方について】
-今回は使っていないのですが、
-コンテンツ幅を指定するのにclass="wrapper"
-をよく使うとの記事を見ました。
-これはbodyタグの内側に<div class="wrapper" </div>をつけるか
-sectionタグにクラス名class="wrapper"をつける。
-これを指定する事で現状、
-about・menu・event・footerでそれぞれに書いている
-max-width: 1000px;
-margin: 0 auto;
-が1回で適応され、
-header・gallery・accessなど画面いっぱいに
-広げたい箇所は個別で幅を指定するという認識であっていますか？
-この使い方はされますか？
+次はレスポンシブの作業もありますし
+まだまだ上手くいかない事ばかりですが、、、
+「楽しいかも！」と思えるようになった事だけでも成長だと捉えて
+頑張っていきたいと思います！
 
-添削よろしくお願いいたします！*/
+ありがとうございます！
+次回講義もよろしくお願いいたします！*/
 
 
 
@@ -307,4 +299,4 @@ header・gallery・accessなど画面いっぱいに
 
 
 
-@media screen and (max-width: 375px) {}
+@media screen and (max-width: 765px) {}
