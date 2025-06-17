@@ -38,12 +38,12 @@ header {
     width: 227px;
 }
 
-.PC_nav ul {
+.pc_nav ul {
     display: flex;
     gap: 54px;
 }
 
-.PC_nav li {
+.pc_nav li {
     width: 105px;
     text-align: center;
     color: #fff;
@@ -51,6 +51,12 @@ header {
         "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
     font-size: 18px;
     font-weight: bold;
+}
+
+/* スマホ版メニュー */
+.sp_nav,
+.sp_btn {
+    display: none;
 }
 
 /* header下のキャッチコピー */
@@ -93,10 +99,12 @@ header {
     width: 50%;
     border-bottom-right-radius: 82px;
     overflow: hidden;
+    order: 1;
 }
 
 .about_text {
     width: 41%;
+    order: 2;
 }
 
 .about_heading {
@@ -171,8 +179,8 @@ h2 img {
     margin-bottom: 59px;
 }
 
-#gallery img {
-    width: 20%;
+#gallery h2 img {
+    width: 245px;
     margin-bottom: 17px;
 }
 
@@ -271,32 +279,321 @@ footer {
     font-size: 16px;
 }
 
+/* メニューとロゴがぶつかる直前のタイミング */
+@media screen and (max-width: 1100px) {
+    .pc_nav {
+        display: none;
+    }
+
+    /* ハンバーガーボタン */
+    .sp_btn {
+        display: block;
+        height: 23px;
+        cursor: pointer;
+        /* 位置の調整 */
+        position: absolute;
+        top: 23px;
+        right: 25px;
+        /* 重なり具合 */
+        z-index: 2;
+    }
+
+    .sp_btn span {
+        display: block;
+        width: 33px;
+        height: 3px;
+        background: #fff;
+        border-radius: 2px;
+        /* 位置の調整 */
+        position: relative;
+        top: 10px;
+        transition: 0.3s;
+    }
+
+    .sp_btn span::before,
+    .sp_btn span::after {
+        content: '';
+        display: block;
+        width: 33px;
+        height: 3px;
+        background: #fff;
+        border-radius: 2px;
+        /* 位置の調整 */
+        position: absolute;
+        transition: 0.3s;
+    }
+
+    .sp_btn span::before {
+        bottom: 10px;
+    }
+
+    .sp_btn span::after {
+        top: 10px;
+    }
+
+    /* ばつ印 */
+    .sp_btn.open span {
+        background-color: transparent;
+    }
+
+    .sp_btn.open span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+
+    .sp_btn.open span::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+
+    /* メニューの見た目 */
+    .sp_nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.8);
+        /* 重なり具合 */
+        z-index: 1;
+    }
+
+    /* 上下左右中央に配置 */
+    .sp_nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        gap: 40px;
+    }
+
+    .sp_nav ul li {
+        color: #fff;
+        font-family: "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ",
+            "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .main_text {
+        font-size: 68px;
+    }
+
+    .sub_text {
+        font-size: 19px;
+    }
+
+    .text_main {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .top_text {
+        padding: 40px 0 56px 0;
+    }
+
+    .en_text {
+        font-size: 17px;
+        margin-bottom: 23px;
+    }
+
+    .main_text {
+        font-size: 38px;
+        line-height: 1.15;
+        letter-spacing: 0.02em;
+    }
+
+    .sub_text {
+        font-size: 16px;
+        line-height: 1.87;
+    }
+
+    /* about */
+    #about {
+        max-width: 335px;
+        flex-direction: column;
+        align-items: center;
+        padding-left: 10px;
+        margin-bottom: 50px;
+    }
+
+    .about_img {
+        width: 100%;
+        border-bottom-right-radius: 0;
+        order: 2;
+    }
+
+    .about_text {
+        width: 100%;
+    }
+
+    .text_main {
+        font-size: 36px;
+        line-height: 1.25;
+    }
+
+    .text_sub {
+        line-height: 1.75;
+    }
+
+    .about_heading {
+        text-align: center;
+        order: 1;
+    }
+
+    .about_heading img {
+        width: 160px;
+        margin-bottom: 12px;
+    }
+
+    /* menu */
+    #menu {
+        max-width: 335px;
+        max-width: 0 auto;
+        margin-bottom: 42px;
+    }
+
+    h2 img {
+        width: 88px;
+        margin-bottom: 17px;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col {
+        width: 100%;
+    }
+
+    .col h3 {
+        font-size: 40px;
+    }
+
+    .text {
+        line-height: 1.58;
+        margin-bottom: 60px;
+    }
+
+    /* gallery */
+    #gallery {
+        margin-bottom: 27px;
+    }
+
+    #gallery h2 img {
+        width: 142px;
+        margin-bottom: 15px;
+    }
+
+    /* event */
+    #event h2 img {
+        width: 101px;
+    }
+
+    .event_box {
+        font-size: 16px;
+        padding: 20px 0 14px 0;
+        margin: 0 auto 27px auto;
+    }
+
+    .event_item {
+        width: 290px;
+    }
+
+    .event_text {
+        margin-left: 0;
+        /* 幅を指定 */
+        width: 290px;
+        /* テキストを折り返さない */
+        white-space: nowrap;
+        /* はみ出た部分を非表示にする */
+        overflow: hidden;
+        /* 非表示部分を...に置き換える */
+        text-overflow: ellipsis;
+    }
+
+    /* access */
+    #access img {
+        width: 124px;
+        margin-bottom: 5px;
+    }
+
+    /* footer */
+    footer {
+        padding-right: 10px;
+    }
+
+    .footer_container {
+        flex-direction: column;
+        padding: 41px 0;
+        max-width: 335px;
+    }
+
+    .footer_logo {
+        margin-bottom: 28px;
+    }
+
+    .salon_ino p {
+        font-size: 18px;
+    }
+
+    .pagetop_button {
+        width: 100px;
+        position: fixed;
+        right: 20px;
+        bottom: 240px;
+    }
+}
+
+
+
+
 
 /* 
-感想
-今回の課題をいただいた際は、
-今の自分のレベルで完成させることが出来るのかとかなり不安でしたが、
-平垣内先生の分かりやすく丁寧な添削のおかげで
-何とかここまで作れて達成感があり、形に出来たことが嬉しく
-ここ数日前からコーディング楽しいかも！と思えるようになりました！
+【ハンバーガーメニューの表示について】
+講義内では出来ていたんですが、保存の際にミスしてしまったのかハンバーガーメニューを
+押しても反応しなくなりました。
+再度、講義動画を確認し同じように指定しているはずなのですが、表示されなくなりました、
+どこか間違っていますでしょうか？
 
-次はレスポンシブの作業もありますし
-まだまだ上手くいかない事ばかりですが、、、
-「楽しいかも！」と思えるようになった事だけでも成長だと捉えて
-頑張っていきたいと思います！
+【about】
+画像とh2(ABOUT US)の順番を入れ替えるためにorderを
+使ってみたのですが、上手くいきませんでした。
 
-ありがとうございます！
-次回講義もよろしくお願いいたします！*/
+【event】
+ .event_text {
+        幅を指定
+        width:290px
+        テキストを折り返さない
+        white-space: nowrap;
+        はみ出た部分を非表示にする
+        overflow: hidden;
+        非表示部分を...に置き換える
+        text-overflow: ellipsis;
+    }
+と指定してみましたが、枠だけが小さくなっていってしまいます。。。
+
+【コンテンツ幅について】
+レスポンシブ時のコンテンツ幅はどう設定しますか？
+デザインカンプで確認し335pxだと思って設定したのですが、
+ブレイクポイントの767pxを超えた時点で
+急に335pxになるのでおかしいですか？
+特にabout us と menu の箇所の左右の余白が気になります。
 
 
+【フォントサイズ設定について】
+１回目のブレイクポイント1100pxでデザインカンプ通りのフォントサイズに設定したのですが、
+（header下のキャッチコピーとaboutの.text_mainの箇所）
+ここは1回目のブレイクポイントで少し小さく・2回目のブレイクポイントでカンプ通り
+に設定するのが自然でしょうか？
 
+【余白の測り方について】
+Chatworkにスクリーンショットを添付させていただいているのですが、
+テキストとMENUの間の余白を測りたい場合、ピンク□の幅で合っていますか？
+この箇所はどういう測り方が適切ですか？
 
-
-
-
-
-
-
-
-
-@media screen and (max-width: 765px) {}
+添削よろしくお願いいたします。
+ */

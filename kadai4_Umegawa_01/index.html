@@ -7,6 +7,8 @@
     <title>DESIGN CAFE</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <scrip src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js">
+        </script>
 </head>
 
 <body>
@@ -14,14 +16,31 @@
     <header id="header">
         <div class="header_slider">
             <div>
-                <img src="./images/pc_first-100.jpg" alt="店内の様子">
+                <picture>
+                    <source srcset="./images/sp_main_vs@2x-100.jpg" media="(max-width:767px)">
+                    <img src="./images/pc_first-100.jpg" alt="店内の様子">
+                </picture>
             </div>
         </div>
         <div class="header_wrap">
             <h1 class="header_logo">
                 <img src="./images/design_cafe_logo_header@2x.png" alt="DESIGN CAFE">
             </h1>
-            <nav class="PC_nav">
+            <nav class="pc_nav">
+                <ul>
+                    <li><a href="#about">ABOUT US</a></li>
+                    <li><a href="#menu">MENU</a></li>
+                    <li><a href="#gallery">GALLERY</a></li>
+                    <li><a href="#event">EVENT</a></li>
+                    <li><a href="#access">ACCESS</a></li>
+                </ul>
+            </nav>
+
+            <!-- スマホ版メニュー -->
+            <div class="sp_btn">
+                <span></span>
+            </div>
+            <nav class="sp_nav">
                 <ul>
                     <li><a href="#about">ABOUT US</a></li>
                     <li><a href="#menu">MENU</a></li>
@@ -46,7 +65,10 @@
         <!-- about -->
         <section id="about">
             <div class="about_img">
-                <img src="./images/pc_about-100.jpg" alt="about_img">
+                <picture>
+                    <source srcset="./images/about_us@2x-100.jpg" media="(max-width:767px)">
+                    <img src="./images/pc_about-100.jpg" alt="about_img">
+                </picture>
             </div>
             <div class="about_text">
                 <h2 class="about_heading">
@@ -67,21 +89,30 @@
             <div class="row">
                 <div class="col">
                     <div>
-                        <img src="./images/pc_menu_drink-100.jpg" alt="drink_img">
+                        <picture>
+                            <source srcset="./images/drink_sp@2x-100.jpg" media="(max-width:767px)">
+                            <img src="./images/pc_menu_drink-100.jpg" alt="drink_img">
+                        </picture>
                         <h3>Drink</h3>
                     </div>
                     <p class="text">ドリンクメニューの概要を100文字程度で紹 介します。素材やこだわりなどをアピールしていきます。</p>
                 </div>
                 <div class="col">
                     <div>
-                        <img src="./images/pc_menu_food-100.jpg" alt="food_img">
+                        <picture>
+                            <source srcset="./images/food_sp@2x-100.jpg" media="(max-width:767px)">
+                            <img src="./images/pc_menu_food-100.jpg" alt="food_img">
+                        </picture>
                         <h3>Food</h3>
                     </div>
                     <p class="text">フードメニューの概要を100文字程度で紹 介します。素材やこだわりなどをアピールしていきます。</p>
                 </div>
                 <div class="col">
                     <div>
-                        <img src="./images/pc_menu_sweets-100.jpg" alt="sweets_img">
+                        <picture>
+                            <source srcset="./images/cake_sp@2x-100.jpg" media="(max-width:767px)">
+                            <img src="./images/pc_menu_sweets-100.jpg" alt="sweets_img">
+                        </picture>
                         <h3>Sweets</h3>
                     </div>
                     <p class="text">スイーツメニューの概要を100文字程度で紹 介します。素材やこだわりなどをアピールしていきます。</p>
@@ -160,6 +191,15 @@
         </div>
         <p class="copy">&copy;2021 DESIGN CAFE</p>
     </footer>
+
+    <script>
+        $(function () {
+            $('.sp_btn').on('click', function () {
+                $('.sp_btn').toggleClass('open');
+                $('.sp_nav').fadeToggle();
+            })
+        })
+    </script>
 
 </body>
 
