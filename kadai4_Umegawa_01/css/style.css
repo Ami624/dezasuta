@@ -4,6 +4,10 @@ body {
     background-color: #e8d9bf;
 }
 
+body.no-scroll {
+    overflow: hidden;
+}
+
 h2 {
     text-align: center;
 }
@@ -61,9 +65,10 @@ header {
 
 /* header下のキャッチコピー */
 .top_text {
+    max-width: 1000px;
     text-align: center;
     margin: 0 auto;
-    padding: 104px 0 93px 0;
+    padding: 104px 10px 93px;
 }
 
 .en_text {
@@ -82,6 +87,10 @@ header {
     font-size: 23px;
     line-height: 1.65;
     letter-spacing: 0.1em;
+}
+
+.sp_br {
+    display: none;
 }
 
 /* about */
@@ -384,6 +393,10 @@ footer {
         font-size: 19px;
     }
 
+    .sp_br {
+        display: block;
+    }
+
     .text_main {
         font-size: 28px;
     }
@@ -391,7 +404,7 @@ footer {
 
 @media screen and (max-width: 767px) {
     .top_text {
-        padding: 40px 0 56px 0;
+        padding: 40px 10px 56px;
     }
 
     .en_text {
@@ -412,30 +425,36 @@ footer {
 
     /* about */
     #about {
-        max-width: 335px;
         flex-direction: column;
         align-items: center;
-        padding-left: 10px;
         margin-bottom: 50px;
+        padding: 0;
     }
 
     .about_img {
         width: 100%;
         border-bottom-right-radius: 0;
         order: 2;
+        margin-bottom: 34px;
     }
 
     .about_text {
         width: 100%;
+        display: contents;
     }
 
     .text_main {
         font-size: 36px;
         line-height: 1.25;
+        margin-bottom: 19px;
+        padding: 0 10px;
+        order: 3;
     }
 
     .text_sub {
         line-height: 1.75;
+        padding: 0 10px;
+        order: 4;
     }
 
     .about_heading {
@@ -450,9 +469,7 @@ footer {
 
     /* menu */
     #menu {
-        max-width: 335px;
-        max-width: 0 auto;
-        margin-bottom: 42px;
+        padding: 0 37px;
     }
 
     h2 img {
@@ -471,6 +488,10 @@ footer {
 
     .col h3 {
         font-size: 40px;
+    }
+
+    .col img {
+        width: 100%;
     }
 
     .text {
@@ -495,16 +516,17 @@ footer {
 
     .event_box {
         font-size: 16px;
-        padding: 20px 0 14px 0;
+        padding: 20px 11px 14px 27px;
         margin: 0 auto 27px auto;
     }
 
     .event_item {
-        width: 290px;
+        line-height: 1;
     }
 
     .event_text {
         margin-left: 0;
+        display: block;
         /* 幅を指定 */
         width: 290px;
         /* テキストを折り返さない */
@@ -513,6 +535,7 @@ footer {
         overflow: hidden;
         /* 非表示部分を...に置き換える */
         text-overflow: ellipsis;
+        padding-bottom: 12px;
     }
 
     /* access */
@@ -529,7 +552,6 @@ footer {
     .footer_container {
         flex-direction: column;
         padding: 41px 0;
-        max-width: 335px;
     }
 
     .footer_logo {
@@ -544,7 +566,7 @@ footer {
         width: 100px;
         position: fixed;
         right: 20px;
-        bottom: 240px;
+        bottom: 40px;
     }
 }
 
@@ -553,47 +575,23 @@ footer {
 
 
 /* 
-【ハンバーガーメニューの表示について】
-講義内では出来ていたんですが、保存の際にミスしてしまったのかハンバーガーメニューを
-押しても反応しなくなりました。
-再度、講義動画を確認し同じように指定しているはずなのですが、表示されなくなりました、
-どこか間違っていますでしょうか？
-
-【about】
-画像とh2(ABOUT US)の順番を入れ替えるためにorderを
-使ってみたのですが、上手くいきませんでした。
-
-【event】
- .event_text {
-        幅を指定
-        width:290px
-        テキストを折り返さない
-        white-space: nowrap;
-        はみ出た部分を非表示にする
-        overflow: hidden;
-        非表示部分を...に置き換える
-        text-overflow: ellipsis;
-    }
-と指定してみましたが、枠だけが小さくなっていってしまいます。。。
-
-【コンテンツ幅について】
-レスポンシブ時のコンテンツ幅はどう設定しますか？
-デザインカンプで確認し335pxだと思って設定したのですが、
-ブレイクポイントの767pxを超えた時点で
-急に335pxになるのでおかしいですか？
-特にabout us と menu の箇所の左右の余白が気になります。
-
-
 【フォントサイズ設定について】
 １回目のブレイクポイント1100pxでデザインカンプ通りのフォントサイズに設定したのですが、
 （header下のキャッチコピーとaboutの.text_mainの箇所）
 ここは1回目のブレイクポイントで少し小さく・2回目のブレイクポイントでカンプ通り
 に設定するのが自然でしょうか？
 
-【余白の測り方について】
-Chatworkにスクリーンショットを添付させていただいているのですが、
-テキストとMENUの間の余白を測りたい場合、ピンク□の幅で合っていますか？
-この箇所はどういう測り方が適切ですか？
+【about】
+レスポンシブ時の.text_main（私たちが提供する〜）の箇所が
+どうしても左揃えになりません。。。
+
+【jQuery】
+まだふわっとしか理解できていないのですが、
+記述方法はあっておりますか？
+・ハンバーガーメニュー展開時にはスクロールさせない
+・navのリンク先に飛んだ際はno-scrollを解除
+までは出来たと思うんですが、
+sp_navを外すという記述がどうしても分かりませんでした。
 
 添削よろしくお願いいたします。
  */
