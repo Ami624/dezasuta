@@ -193,13 +193,14 @@ h2 img {
     margin-bottom: 17px;
 }
 
-.gallery {
+.gallery_slider {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
-.gallery img {
+.gallery_slider img {
     width: 20%;
 }
 
@@ -580,69 +581,99 @@ footer {
     }
 }
 
+/* スライダー */
+.slick-dots {
+    bottom: 20px
+}
+
+.slick-dots li.slick-active button:before,
+.slick-dots li button:before {
+    color: #fff;
+    font-size: 12px;
+}
+
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+
+.slick-prev {
+    left: 360px;
+    z-index: 999;
+}
+
+.slick-next {
+    right: 360px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-top: 5px solid #ffffff;
+    border-right: 5px solid #ffffff;
+}
+
+.slick-prev:before {
+    transform: rotate(-135deg);
+    position: absolute;
+    left: 20%;
+    bottom: -50%;
+}
+
+.slick-next:before {
+    transform: rotate(45deg);
+    position: absolute;
+    right: 20%;
+    bottom: -50%;
+}
+
+@media screen and (max-width: 767px) {
+    .slick-prev:before {
+        left: -1150%;
+    }
+
+    .slick-next:before {
+        right: -1550%;
+    }
+}
+
+/* モーダル */
+.slide_img {
+    width: 100%;
+    cursor: pointer;
+}
+
 
 /* 
-【box-sizingについて】
-box-sizing: border-box;について調べて意味は理解できたんですが、
-これは現場ではよく利用されるものなんでしょうか？
+【positionについて】
+①ギャラリーの箇所の矢印を固定する際、
+.gallery_sliderを基準にするためposition: relative;
+.slick-prev:before,
+.slick-next:before を
+position: absolute;　で位置指定したのですが、あっていますか？
 
-サイト全体に予め
-＊ {
-box-sizing: border-box;
-}
-と指定しておく
+positionの指定方法がまだ完璧に理解できていないので再度教えていただきたいです。
+（position: fixed;も合わせて教えていただきたいです）
 
-＊,
-*::before,
-*::after {
-box-sizing: border-box;
-}
-と指定しておく
+②％での指定方法もわからなかったので
+計算方法・指定方法・考え方を再度教えていただきたいです。
 
-の２種類記述が出てきたんでてきました。
+【gallery】
+画像を10枚にしてスライドにしたんですが、
+レスポンシブの際、画像が荒くなっている気がします。
+特にpc_gallary_05-100.jpgが気になって
+この画像だけですが、２倍書き出しを試してみました。
+レスポンシブの際のみ２倍書き出しの画像(sp_gallary_05@2x-80.jpg)に変更するために
+pictureタグを使ってやってみたのですが、画像サイズ自体おかしくなってしまいました。。。
 
-この２つの違いを教えていただきたいです。
+なぜ反映されないのかわからなくなってしまったので教えていただきたいです。
 
-
-
-今回、下記箇所でbox-sizing指定しましたが、
- .text_main {
-        width: 100%;
-        font-size: 36px;
-        line-height: 1.25;
-        margin-bottom: 19px;
-        padding: 0 10px;
-        order: 3;
-        box-sizing: border-box;
-
-その下の.text_subで指定していないのには何か違いがありますか？
-
-
-【改行位置の見極めについて】
-デザインカンプから改行位置を読み取るのが難しいなと感じています。
-これは実装しながら経験を重ねるしかないですか？
-
-例えば、
-デザイナーさんがここだけは改行入れてほしい！など予め指定いただく場合などもあるのでしょうか？
-
-
-【メディアクエリの記述場所について】
-現状、
-PC版　→　1回目のブレイクポイント　→ SP版　の順で書いていますが、
-記述が長くなってきてPC版でどんな指定してたっけ？と確認したい時に
-すっごく上までスクロールして確認するのが少し大変だなと感じています。
-
-まだ、id.class名の付け方やCSSの記述順など
-自分の中でのルール化が確立していないのもあって大変なんだと思うのですが、
-これも経験を積むのが一番ですか？
-
-調べている中で
-PC版　→ メディアクエリ　→ PC版　→ メディアクエリ　の順で記述している方も
-いたのですが、チームで作業する際や現場では現状の指定方法が一般的ですか？
-
-平垣内先生はコードを書く上で意識していることや
-ルール化している作業などあれば教えていただけると嬉しいです。
-
+【モーダル】
+モーダルも挑戦してみましたが、、、
+何が何だかグチャグチャになってしまいました...泣
+もっとやりやすい記述があれば教えていただきたいです。。。
 
 添削よろしくお願いいたします。
  */
