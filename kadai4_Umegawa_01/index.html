@@ -5,14 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DESIGN CAFE</title>
+    <!-- slick -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <!-- modal -->
+    <link rel="stylesheet" href="./remodal/remodal-default-theme.css">
+    <link rel="stylesheet" href="./remodal/remodal.css">
+    <!-- 自分のcss -->
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js">
     </script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./remodal/remodal.min.js"></script>
 </head>
 
 <body>
@@ -138,24 +144,188 @@
             </h2>
             <div class="gallery_slider">
                 <picture>
-                    <source srcset="./images/sp_gallery_05@2x-80.jpg" media="(max-width:767px)">
+                    <source srcset="./images/sp_gallary_05@2x-80.jpg" media="(max-width:767px)">
                     <img src="./images/pc_gallary_05-100.jpg" alt="店内">
                 </picture>
-                <img src="./images/pc_gallary_04-100.jpg" alt="コーヒー豆" class="slide_img">
-                <img src="./images/pc_gallary_03-100.jpg" alt="店内2" class="slide_img">
-                <img src="./images/pc_gallary_02-100.jpg" alt="カフェ看板" class="slide_img">
-                <img src="./images/pc_gallary_01-100.jpg" alt="ラテアート" class="slide_img">
-                <img src="./images/pc_gallary_05-100.jpg" alt="店内" class="slide_img">
-                <img src="./images/pc_gallary_04-100.jpg" alt="コーヒー豆" class="slide_img">
-                <img src="./images/pc_gallary_03-100.jpg" alt="店内2" class="slide_img">
-                <img src="./images/pc_gallary_02-100.jpg" alt="カフェ看板" class="slide_img">
-                <img src="./images/pc_gallary_01-100.jpg" alt="ラテアート" class="slide_img">
+                <picture>
+                    <source srcset="./images/sp_gallary_04@2x-80.jpg" media="(max-width:767px)">
+                    <img src="./images/pc_gallary_04-100.jpg" alt="コーヒー豆" class="slide_img">
+                </picture>
+                <picture>
+                    <source srcset="./images/sp_gallary_03@2x-80.jpg" media="(max-width:767px)">
+                    <img src="./images/pc_gallary_03-100.jpg" alt="店内2" class="slide_img">
+                </picture>
+                <picture>
+                    <source srcset="./images/sp_gallary_02@2x-80.jpg" media="(max-width:767px)">
+                    <img src="./images/pc_gallary_02-100.jpg" alt="カフェ看板" class="slide_img">
+                </picture>
+                <picture>
+                    <source srcset="./images/sp_gallary_01@2x-80.jpg" media="(max-width:767px)">
+                    <img src="./images/pc_gallary_01-100.jpg" alt="ラテアート" class="slide_img">
+                </picture>
+                <picture>
+                    <source srcset="./images/sp_gallary_05@2x-80.jpg" media="(max-width:767px)">
+                    <img src="./images/pc_gallary_05-100.jpg" alt="店内" class="slide_img">
+                </picture>
+                <picture>
+                    <source srcset="./images/sp_gallary_04@2x-80.jpg" media="(max-width:767px)">
+                    <img src="./images/pc_gallary_04-100.jpg" alt="コーヒー豆" class="slide_img">
+                </picture>
+                <picture>
+                    <source srcset="./images/sp_gallary_03@2x-80.jpg" media="(max-width:767px)">
+                    <img src="./images/pc_gallary_03-100.jpg" alt="店内2" class="slide_img">
+                </picture>
+                <picture>
+                    <source srcset="./images/sp_gallary_02@2x-80.jpg" media="(max-width:767px)">
+                    <img src="./images/pc_gallary_02-100.jpg" alt="カフェ看板" class="slide_img">
+                </picture>
+                <picture>
+                    <source srcset="./images/sp_gallary_01@2x-80.jpg" media="(max-width:767px)">
+                    <img src="./images/pc_gallary_01-100.jpg" alt="ラテアート" class="slide_img">
+                </picture>
             </div>
+
+            <!-- remodalを使用した場合 -->
+            <!-- <div class="gallery_slider">
+                <a href="#modal_a">
+                    <picture>
+                        <source srcset="./images/sp_gallary_05@2x-80.jpg" media="(max-width:767px)">
+                        <img src="./images/pc_gallary_05-100.jpg" alt="店内">
+                    </picture>
+                </a>
+                <div class="remodal" data-remodal-id="modal_a">
+                    <button data-remodal-action="close" class="remodal-close"></button>
+                    <picture>
+                        <source srcset="./images/sp_gallary_05@2x-80.jpg" media="(max-width:767px)">
+                        <img src="./images/pc_gallary_05-100.jpg" alt="店内">
+                    </picture>
+                </div>
+                <a href="#modal_b">
+                    <picture>
+                        <source srcset="./images/sp_gallary_04@2x-80.jpg" media="(max-width:767px)">
+                        <img src="./images/pc_gallary_04-100.jpg" alt="コーヒー豆" class="slide_img">
+                    </picture>
+                </a>
+                <div class="remodal" data-remodal-id="modal_b">
+                    <button data-remodal-action="close" class="remodal-close"></button>
+                    <picture>
+                        <source srcset="./images/sp_gallary_04@2x-80.jpg" media="(max-width:767px)">
+                        <img src="./images/pc_gallary_04-100.jpg" alt="コーヒー豆" class="slide_img">
+                    </picture>
+                </div>
+                <a href="#modal_c">
+                    <picture>
+                        <source srcset="./images/sp_gallary_03@2x-80.jpg" media="(max-width:767px)">
+                        <img src="./images/pc_gallary_03-100.jpg" alt="店内2" class="slide_img">
+                    </picture>
+                </a>
+                <div class="remodal" data-remodal-id="modal_c">
+                    <button data-remodal-action="close" class="remodal-close"></button>
+                    <picture>
+                        <source srcset="./images/sp_gallary_03@2x-80.jpg" media="(max-width:767px)">
+                        <img src="./images/pc_gallary_03-100.jpg" alt="店内2" class="slide_img">
+                    </picture>
+                </div>
+                <a href="#modal_d">
+                    <picture>
+                        <source srcset="./images/sp_gallary_02@2x-80.jpg" media="(max-width:767px)">
+                        <img src="./images/pc_gallary_02-100.jpg" alt="カフェ看板" class="slide_img">
+                    </picture>
+                </a>
+                <div class="remodal" data-remodal-id="modal_d">
+                    <button data-remodal-action="close" class="remodal-close"></button>
+                    <picture>
+                        <source srcset="./images/sp_gallary_02@2x-80.jpg" media="(max-width:767px)">
+                        <img src="./images/pc_gallary_02-100.jpg" alt="カフェ看板" class="slide_img">
+                    </picture>
+                </div>
+                <a href="#modal_e">
+                    <picture>
+                        <source srcset="./images/sp_gallary_01@2x-80.jpg" media="(max-width:767px)">
+                        <img src="./images/pc_gallary_01-100.jpg" alt="ラテアート" class="slide_img">
+                    </picture>
+                </a>
+                <div class="remodal" data-remodal-id="modal_e">
+                    <button data-remodal-action="close" class="remodal-close"></button>
+                    <picture>
+                        <source srcset="./images/sp_gallary_01@2x-80.jpg" media="(max-width:767px)">
+                        <img src="./images/pc_gallary_01-100.jpg" alt="ラテアート" class="slide_img">
+                    </picture>
+                </div>
+                <a href="#modal_a">
+                    <picture>
+                        <source srcset="./images/sp_gallary_05@2x-80.jpg" media="(max-width:767px)">
+                        <img src="./images/pc_gallary_05-100.jpg" alt="店内">
+                    </picture>
+                </a>
+                <div class="remodal" data-remodal-id="modal_a">
+                    <button data-remodal-action="close" class="remodal-close"></button>
+                    <picture>
+                        <source srcset="./images/sp_gallary_05@2x-80.jpg" media="(max-width:767px)">
+                        <img src="./images/pc_gallary_05-100.jpg" alt="店内">
+                    </picture>
+                </div>
+                <a href="#modal_b">
+                    <picture>
+                        <source srcset="./images/sp_gallary_04@2x-80.jpg" media="(max-width:767px)">
+                        <img src="./images/pc_gallary_04-100.jpg" alt="コーヒー豆" class="slide_img">
+                    </picture>
+                </a>
+                <div class="remodal" data-remodal-id="modal_b">
+                    <button data-remodal-action="close" class="remodal-close"></button>
+                    <picture>
+                        <source srcset="./images/sp_gallary_04@2x-80.jpg" media="(max-width:767px)">
+                        <img src="./images/pc_gallary_04-100.jpg" alt="コーヒー豆" class="slide_img">
+                    </picture>
+                </div>
+                <a href="#modal_c">
+                    <picture>
+                        <source srcset="./images/sp_gallary_03@2x-80.jpg" media="(max-width:767px)">
+                        <img src="./images/pc_gallary_03-100.jpg" alt="店内2" class="slide_img">
+                    </picture>
+                </a>
+                <div class="remodal" data-remodal-id="modal_c">
+                    <button data-remodal-action="close" class="remodal-close"></button>
+                    <picture>
+                        <source srcset="./images/sp_gallary_03@2x-80.jpg" media="(max-width:767px)">
+                        <img src="./images/pc_gallary_03-100.jpg" alt="店内2" class="slide_img">
+                    </picture>
+                </div>
+                <a href="#modal_d">
+                    <picture>
+                        <source srcset="./images/sp_gallary_02@2x-80.jpg" media="(max-width:767px)">
+                        <img src="./images/pc_gallary_02-100.jpg" alt="カフェ看板" class="slide_img">
+                    </picture>
+                </a>
+                <div class="remodal" data-remodal-id="modal_d">
+                    <button data-remodal-action="close" class="remodal-close"></button>
+                    <picture>
+                        <source srcset="./images/sp_gallary_02@2x-80.jpg" media="(max-width:767px)">
+                        <img src="./images/pc_gallary_02-100.jpg" alt="カフェ看板" class="slide_img">
+                    </picture>
+                </div>
+                <a href="#modal_e">
+                    <picture>
+                        <source srcset="./images/sp_gallary_01@2x-80.jpg" media="(max-width:767px)">
+                        <img src="./images/pc_gallary_01-100.jpg" alt="ラテアート" class="slide_img">
+                    </picture>
+                </a>
+                <div class="remodal" data-remodal-id="modal_e">
+                    <button data-remodal-action="close" class="remodal-close"></button>
+                    <picture>
+                        <source srcset="./images/sp_gallary_01@2x-80.jpg" media="(max-width:767px)">
+                        <img src="./images/pc_gallary_01-100.jpg" alt="ラテアート" class="slide_img">
+                    </picture>
+                </div>
+            </div> -->
 
             <!-- モーダル -->
             <div id="modal">
-                <span class="close">&times;</span>
-                <img id="modal_img" alt="">
+                <div class="modal_inner">
+                    <span class="close">&times;</span>
+                    <img id="modal_img" alt="">
+                    <p id="modal_text">テキストテキストテキストテキストテキスト</p>
+                </div>
             </div>
         </section>
 
@@ -264,13 +434,15 @@
                 var src = $(this).attr('src');
                 // モーダル内のimgにセット
                 $('#modal_img').attr('src', src);
+                // // テキスト挿入
+                // $('#modal_text').text(caption); ←この記述は必要ですか？
                 // モーダルを表示
                 $('#modal').fadeIn();
             });
 
             // モーダルを閉じる
-            $('#modal, .close').on('click', function (e) {
-                $('modal').fadeOut();
+            $('#modal .close').on('click', function (e) {
+                $('#modal').fadeOut();
             })
         })
     </script>

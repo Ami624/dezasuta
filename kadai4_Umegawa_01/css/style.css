@@ -197,11 +197,6 @@ h2 img {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-}
-
-.gallery_slider img {
-    width: 20%;
 }
 
 /* event */
@@ -597,12 +592,12 @@ footer {
 }
 
 .slick-prev {
-    left: 360px;
+    left: 21%;
     z-index: 999;
 }
 
 .slick-next {
-    right: 360px;
+    right: 21%;
 }
 
 .slick-prev:before,
@@ -617,29 +612,69 @@ footer {
 
 .slick-prev:before {
     transform: rotate(-135deg);
-    position: absolute;
-    left: 20%;
-    bottom: -50%;
+    left: 22%;
 }
 
 .slick-next:before {
     transform: rotate(45deg);
-    position: absolute;
-    right: 20%;
-    bottom: -50%;
+    right: 22%;
 }
 
 @media screen and (max-width: 767px) {
+
+    .slick-prev:before,
+    .slick-next:before {
+        width: 20px;
+        height: 20px;
+        border-top: 2px solid #ffffff;
+        border-right: 2px solid #ffffff;
+    }
+
     .slick-prev:before {
-        left: -1150%;
+        left: 5%;
     }
 
     .slick-next:before {
-        right: -1550%;
+        right: 5%;
     }
 }
 
 /* モーダル */
+#modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    height: 60%;
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal_inner {
+    max-width: 90%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#modal_text {
+    font-size: 20px;
+    color: #ffffff;
+    padding-top: 50px;
+
+}
+
 .slide_img {
     width: 100%;
     cursor: pointer;
@@ -647,33 +682,53 @@ footer {
 
 
 /* 
-【positionについて】
-①ギャラリーの箇所の矢印を固定する際、
-.gallery_sliderを基準にするためposition: relative;
-.slick-prev:before,
-.slick-next:before を
-position: absolute;　で位置指定したのですが、あっていますか？
+【ギャラリー】
+①矢印の位置を％で指定したのですが、
+デベロッパーツールで確認するとグレーアウトしていて
+適用されていない気がします。。。
+positionについてお知らせが出てましたが、
+どこのことなのか見つけ出すことができませんでした。
+あと一歩だったのに悔しいです。。。泣
 
-positionの指定方法がまだ完璧に理解できていないので再度教えていただきたいです。
-（position: fixed;も合わせて教えていただきたいです）
-
-②％での指定方法もわからなかったので
-計算方法・指定方法・考え方を再度教えていただきたいです。
-
-【gallery】
-画像を10枚にしてスライドにしたんですが、
-レスポンシブの際、画像が荒くなっている気がします。
-特にpc_gallary_05-100.jpgが気になって
-この画像だけですが、２倍書き出しを試してみました。
-レスポンシブの際のみ２倍書き出しの画像(sp_gallary_05@2x-80.jpg)に変更するために
-pictureタグを使ってやってみたのですが、画像サイズ自体おかしくなってしまいました。。。
-
-なぜ反映されないのかわからなくなってしまったので教えていただきたいです。
+②5枚の写真をSP版では２倍書き出しの画像になるように全て変更してみました。
+きちんと適用されていますでしょうか？
 
 【モーダル】
-モーダルも挑戦してみましたが、、、
-何が何だかグチャグチャになってしまいました...泣
-もっとやりやすい記述があれば教えていただきたいです。。。
+①せっかく添削いただいたきましたので難しいバージョンでのモーダルの記述の修正と
+追加で背景色やポインター・テキストの追加などに挑戦してみました。
+その中で、不明点が２つありました。
+１、HTML298行目の記載は必要なのか？
+ありにすると画像をタップしてもモーダルが表示されませんでした。
+２、モーダル内の画像サイズをもう少し大きく表示したかったのですが、
+どこに何を記述したら調整できるのかわからなくなりました。
+他、全体的に記述がきちんとできているのかも含め見ていただけると嬉しいです。
 
-添削よろしくお願いいたします。
+プラス remodalを使用した場合も挑戦してみましたので
+そちらも見ていただけますと嬉しいです。
+（HTML 189行目からの記述です）
+ややこしい記述にしてしまい申し訳ないのですが、ご確認いただけると嬉しいです。
+
+
+【感想＆今後の勉強方法について】
+まずは全6回の講義ありがとうございました！
+知識０の状態からスタートし
+1回目の講義から難しくて本当にできるのかと不安しかありませんでしたが、
+いつの間にかこんなにたくさんのコードを自分で調べて考えて書けるようになっていて驚いています！
+
+まだまだ自分で調べて記述しても思い通りに表示されないことも多く落ち込みますが、
+平垣内先生の丁寧な添削のおかげで修正して思い通りに動くとめちゃくちゃ嬉しいです！
+
+講義中は毎回新しい知識ばかりで理解するのに必死で「不明点ありますか？」と聞いてくださるのに
+何が分からないのかも分からない状態で発言ができずすみません。。。
+ただ、その中でも講義後動画を何度も見て、課題を取り組む中で理解を深めることができ
+少しづつですが自分で考えて1つのサイトを作ることができるようになっていて
+今では「コーディング楽しい！」と思っています！ありがとうございます！
+
+この調子でポートフォリオ作成も全力で頑張りたいと思います！
+よろしくお願いいたします！
+
+１ヶ月間期間があいてしまいますが、コーディングに触れる機会を０にはしたくないので
+これはしておくと良い勉強・参考サイト・動画・アプリなどあれば教えていただきたいです。
+
+長くなりましたが、、添削よろしくお願いいたします。
  */
